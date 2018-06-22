@@ -6,11 +6,17 @@ import router from './router'
 import axios from 'axios'
 import Vuex from 'vuex'
 // import '../static/style/style.css'
+import AddrssPick from '@/components/address-pick'
+import DateTime from '@/components/date-time'
 
 Vue.config.productionTip = false
 
 //全局使用vuex
 Vue.use(Vuex)
+
+Vue.component('address-pick', AddrssPick)
+Vue.component('date-time', DateTime)
+
 
 axios.defaults.headers.put['Content-Type'] = 'application/json'
 axios.defaults.headers.post['Content-Type'] = 'application/json'

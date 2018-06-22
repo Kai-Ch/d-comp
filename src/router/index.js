@@ -5,11 +5,15 @@ Vue.use(Router)
 
 export default new Router({
   base: '/sbd',
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'Hello',
-      component: resolve => require(['@/components/Hello'],resolve)
+      component: resolve => require(['@/components/Hello'], resolve)
+    },
+    {
+      path: '/comp-test',
+      name: 'CompTest',
+      component: resolve => require(['@/components/component-test'], resolve)
     }
   ]
 })
